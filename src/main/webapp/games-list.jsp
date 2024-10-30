@@ -19,6 +19,13 @@
       <div class="card-body">
         <h5 class="card-title">Catálogo de games</h5>
         <p class="card-text">Mantenha a lista de games atualizados e acessíveis.</p>
+
+        <c:if test="${not empty mensagem}">
+          <div class="alert alert-success" role="alert">
+            ${mensagem}
+          </div>
+        </c:if>
+
         <table class="table table-striped table-bordered">
           <thead>
           <tr>
@@ -29,24 +36,16 @@
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Super Mário Bros</td>
-            <td class="text-start">Nintendo</td>
-            <td class="text-center">1985</td>
-            <td class="text-center"><input type="checkbox" checked="checked" disabled="disabled"></td>
-          </tr>
-          <tr>
-            <td>The Legend of Zelda</td>
-            <td class="text-start">Nintendo</td>
-            <td class="text-center">1986</td>
-            <td class="text-center"><input type="checkbox" disabled="disabled"></td>
-          </tr>
-          <tr>
-            <td>Megaman</td>
-            <td class="text-start">Capcom</td>
-            <td class="text-center">1987</td>
-            <td class="text-center"><input type="checkbox" disabled="disabled"></td>
-          </tr>
+
+          <c:forEach items="${games}" var="game">
+            <tr>
+              <td>${game.titulo}</td>
+              <td class="text-start">${game.estudio}</td>
+              <td class="text-center">${game.anoLancamento}</td>
+              <td class="text-center"><input type="checkbox" checked="checked" disabled="disabled"></td>
+            </tr>
+          </c:forEach>
+
           </tbody>
         </table>
         <a href="cadastro-game.jsp" class="btn btn-primary">Cadastrar novo game</a>

@@ -31,7 +31,7 @@
           </div>
           <div class="form-group mt-3">
             <label for="id-finalizado">Finalizado</label>
-            <input type="text" name="finalizado" id="id-finalizado" class="form-control">
+            <input type="checkbox" name="finalizado" id="id-finalizado">
           </div>
           <input type="submit" value="Salvar" class="btn btn-primary mt-3">
         </form>

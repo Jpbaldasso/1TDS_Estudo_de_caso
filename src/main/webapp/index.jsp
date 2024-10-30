@@ -9,7 +9,6 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
-
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 </body>

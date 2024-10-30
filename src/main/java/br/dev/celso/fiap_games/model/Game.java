@@ -2,11 +2,11 @@ package br.dev.celso.fiap_games.model;
 
 public class Game {
 
-    public int gameId;
-    public String titulo;
-    public String estudio;
-    public int anoLancamento;
-    public boolean finalizado;
+    private int gameId;
+    private String titulo;
+    private String estudio;
+    private int anoLancamento;
+    private boolean finalizado;
 
     public int getGameId() {
         return gameId;
